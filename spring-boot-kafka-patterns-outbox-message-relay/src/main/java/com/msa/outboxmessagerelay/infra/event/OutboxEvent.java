@@ -20,6 +20,20 @@ public class OutboxEvent {
     private Outbox outbox;
     private Event event;
 
+    /*
+    * event 필요 X
+    * */
+    public static OutboxEvent of(Outbox outbox){
+        OutboxEvent outboxEvent = new OutboxEvent();
+
+        outboxEvent.outbox = outbox;
+
+        return outboxEvent;
+    }
+
+    /*
+    * event 필요 o(사실상 필요없음, 어댑터 패턴으로 남겨둔다)
+    * */
     public static OutboxEvent of(Outbox outbox, Event event){
         OutboxEvent outboxEvent = new OutboxEvent();
 
