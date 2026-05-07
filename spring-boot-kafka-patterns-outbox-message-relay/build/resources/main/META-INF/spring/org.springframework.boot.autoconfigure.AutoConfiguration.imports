@@ -1,0 +1,2 @@
+# 동작의도 : MessageRelayConfig를 최초 root Configuration으로 스캔하여, 나머지 모듈 프로젝트의 스캔을 완료하도록 한다.
+com.msa.outboxmessagerelay.MessageRelayConfig

@@ -1,0 +1,4 @@
+rootProject.name = 'spring-boot-kafka-patterns-order-with-message-relay-module'
+
+include 'spring-boot-kafka-patterns-order'
+include 'spring-boot-kafka-patterns-outbox-message-relay'
