@@ -1,9 +1,6 @@
 package com.msa.outboxmessagerelay.infra.outbox.handler;
 
-import com.msa.outboxmessagerelay.infra.event.Event;
-import com.msa.outboxmessagerelay.infra.event.OutboxEvent;
-import com.msa.outboxmessagerelay.infra.event.payload.EventPayload;
-import com.msa.outboxmessagerelay.infra.event.payload.OrderCreatedEventPayload;
+import com.msa.outboxmessagerelay.infra.outbox.model.OutboxEvent;
 import com.msa.outboxmessagerelay.model.entity.Outbox;
 import com.msa.outboxmessagerelay.repository.OutboxRepository;
 import lombok.RequiredArgsConstructor;

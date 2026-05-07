@@ -2,7 +2,7 @@ package com.msa.outboxmessagerelay.publisher;
 
 import com.msa.outboxmessagerelay.infra.event.Event;
 import com.msa.outboxmessagerelay.infra.event.EventType;
-import com.msa.outboxmessagerelay.infra.event.OutboxEvent;
+import com.msa.outboxmessagerelay.infra.outbox.model.OutboxEvent;
 import com.msa.outboxmessagerelay.infra.event.payload.EventPayload;
 import com.msa.outboxmessagerelay.model.entity.Outbox;
 import lombok.RequiredArgsConstructor;

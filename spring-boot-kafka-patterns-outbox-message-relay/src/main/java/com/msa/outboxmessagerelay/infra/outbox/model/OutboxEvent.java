@@ -1,6 +1,6 @@
-package com.msa.outboxmessagerelay.infra.event;
+package com.msa.outboxmessagerelay.infra.outbox.model;
 
-import com.msa.outboxmessagerelay.infra.event.payload.EventPayload;
+import com.msa.outboxmessagerelay.infra.event.Event;
 import com.msa.outboxmessagerelay.model.entity.Outbox;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
