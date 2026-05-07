@@ -1,5 +1,6 @@
 package com.msa.outboxmessagerelay.infra.event;
 
+import com.msa.outboxmessagerelay.infra.event.payload.EventPayload;
 import com.msa.outboxmessagerelay.model.entity.Outbox;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,11 +18,13 @@ public class OutboxEvent {
     * */
 
     private Outbox outbox;
+    private Event event;
 
-    public static OutboxEvent of(Outbox outbox){
+    public static OutboxEvent of(Outbox outbox, Event event){
         OutboxEvent outboxEvent = new OutboxEvent();
 
         outboxEvent.outbox = outbox;
+        outboxEvent.event = event;
 
         return outboxEvent;
     }

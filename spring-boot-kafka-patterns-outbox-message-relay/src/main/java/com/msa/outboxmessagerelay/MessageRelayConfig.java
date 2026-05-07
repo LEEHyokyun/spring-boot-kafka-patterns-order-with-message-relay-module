@@ -29,7 +29,7 @@ import java.util.concurrent.Executors;
 * */
 //@EnableAsync
 //@Configuration
-@ComponentScan("com.outboxmessagerelay")
+@ComponentScan("com.msa.outboxmessagerelay")
 //@EnableScheduling
 public class MessageRelayConfig {
 

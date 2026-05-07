@@ -1,4 +1,4 @@
-package com.msa.order.infra.kafka.event.eventpublisher;
+package com.msa.order.service.eventpublisher;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
