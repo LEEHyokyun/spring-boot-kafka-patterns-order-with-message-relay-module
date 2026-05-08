@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Event<T extends EventPayload> {
+
     private String eventTopic;
     private EventType eventType;
     private T payload;

@@ -1,7 +1,7 @@
 package com.msa.outboxmessagerelay.infra.event;
 
-import com.msa.outboxmessagerelay.infra.event.payload.EventPayload;
-import com.msa.outboxmessagerelay.infra.event.payload.OrderCreatedEventPayload;
+import com.msa.outboxmessagerelay.util.event.payload.EventPayload;
+import com.msa.outboxmessagerelay.util.event.payload.OrderCreatedEventPayload;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

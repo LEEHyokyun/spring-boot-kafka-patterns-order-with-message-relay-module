@@ -1,7 +1,7 @@
 package com.msa.order.service;
 
 import com.msa.order.infra.kafka.event.EventType;
-import com.msa.order.service.eventpublisher.KafkaEventPublisher;
+import com.msa.order.util.kafkaEvent.KafkaEventPublisher;
 import com.msa.order.model.entity.Order;
 import com.msa.order.model.entity.OrderDetail;
 import com.msa.order.model.request.OrderCreateRequest;
@@ -11,7 +11,8 @@ import com.msa.order.repository.OrderDetailRepository;
 import com.msa.order.repository.OrderRepository;
 import com.msa.outboxmessagerelay.infra.event.Event;
 import com.msa.outboxmessagerelay.publisher.OutboxMessageRelayPublisher;
-import com.msa.outboxmessagerelay.infra.event.payload.OrderCreatedEventPayload;
+import com.msa.outboxmessagerelay.util.event.payload.OrderCreatedEventPayload;
+import com.msa.outboxmessagerelay.util.idempotency.KeyGenerator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -71,6 +72,9 @@ public class OrderService {
                         .eventType(ORDER_CREATED)
                         .payload(
                                 OrderCreatedEventPayload.builder()
+                                        .idempotencyId(order.getOrderId().toString())
+                                        //.idempotencyId("1")
+                                        .eventId(KeyGenerator.generateEventId())
                                         .productId(orderCreateRequest.getProductId())
                                         .orderedQty(orderCreateRequest.getOrderDetailQty())
                                         .build()

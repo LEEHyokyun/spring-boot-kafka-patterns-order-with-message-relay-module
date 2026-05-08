@@ -2,7 +2,7 @@ package com.msa.outboxmessagerelay.infra.event;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.msa.outboxmessagerelay.infra.event.payload.EventPayload;
+import com.msa.outboxmessagerelay.util.event.payload.EventPayload;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.msa.outboxmessagerelay.infra.event.payload;
+package com.msa.outboxmessagerelay.util.event.payload;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,6 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class OrderCreatedEventPayload implements EventPayload {
+    private String idempotencyId;
+    private String eventId;
     private Long productId;
     private Long orderedQty;
 }

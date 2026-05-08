@@ -1,8 +1,5 @@
-package com.msa.order.service.eventpublisher;
+package com.msa.order.util.kafkaEvent;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.msa.order.infra.kafka.event.Event;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
